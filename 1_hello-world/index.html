@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <h1>Hello World!</h1>
 
     <div>
-        <p>Este e um <strong>parágrafo</strong> dentro de uma div.</p>
-
+        <p>
+            Este e um <strong>parágrafo</strong> dentro de uma div.
+        </p>
         <a href="#">Este é um Link (anchor)</a>
+
+        <h3>Códigos:</h3>
+        <ul>
+            <li><a href="#codigo_em_c">Veja um código em C</a></li>
+            <li><a href="#codigo_em_java">Veja um código em Java</a></li>
+        </ul>
     </div>
 
     <hr>
@@ -22,5 +30,99 @@
     <hr>
 
     <p>OK, mas como colocar o <b>CSS</b> nesta página?</p>
+
+    <h1>Próximos Passos</h1>
+
+    <p>
+        É possível estilizar sua página com CSS de três formas:
+    </p>
+
+    <ol>
+        <li>CSS inline (atributo style)</li>
+        <li>CSS externo</li>
+        <li>Tag style</li>
+    </ol>
+
+    <p style="font: 10pt sans-serif; color: forestgreen;">
+        Este texto foi modificado por meio de inline CSS.
+    </p>
+
+    <h3 style="color: indigo; font-family: sans-serif;">
+        Código em C:
+    </h3>
+
+    <pre id="codigo_em_c" style="background-color: #222; color: white;">
+        <span></span>
+        <span></span>
+        <span style="color: greenyellow;">#include < stdio.h></stdio.h></span>
+        <span style="color: greenyellow;">#include < stdlib.h></stdlib.h></span>
+        <span></span>
+        <span><span style="color:cornflowerblue;">int</span> <span style="color: lightcoral;">main</span>() {</span>
+            <span>printf(<span style="color: gold;">"Hello World!"</span>);</span>
+            <span>return <span style="color: orchid;">0</span>;</span>
+        <span>}</span>
+        <span></span>
+    </pre>
+
+    <p>É difícil estilizar por meio do inline, né meu filho?</p>
+    <p>Mas podemos encurtar o trabalho por meio da <b>tag style</b>:</p>
+
+    <style>
+        .subtitulo {
+            font-family: sans-serif;
+            color: indigo;
+        }
+
+        #codigo_em_java {
+            /* margin: 1em 0; */
+            /* white-space: normal; */
+            line-height: 1.58em;
+            word-break: break-all;
+            word-break: break-all;
+            background-color: #2e2e2e;
+            color: #e5e5e5;
+        }
+
+        #codigo_em_java span {
+            display: inline;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .comment {
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        .keyword {
+            color: deepskyblue;
+        }
+
+        .method {
+            font-weight: bold;
+        }
+
+        .string {
+            color: chartreuse;
+        }
+
+        .number {
+            color: orangered;
+        }
+    </style>
+
+    <h3 class="subtitulo">Código em Java:</h3>
+
+    <pre id="codigo_em_java">
+        <span></span>
+        <span></span>
+        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="method">main</span> <span>(String[] args) {</span>
+            <span class="comment">// Imprimir mensagem no terminal</span>
+            <span>System.out.<span class="method">println</span>(</span><span class="string">"Hello World!"</span><span>);</span>
+            <span>return</span> <span class="number">1</span><span>;</span>
+        <span>}</span>
+    </pre>
+
+    <p style="text-align: center; color: indianred;">O restante do documento foi estilizado com um arquivo de CSS externo.</p>
 </body>
 </html>
